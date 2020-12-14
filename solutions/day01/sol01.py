@@ -30,3 +30,16 @@ Of course, your expense report is much larger. Find the two entries that sum to 
 
 
 '''
+def getSol():
+    initialProblemInput = open("input01", "r").read().split("\n")
+    del initialProblemInput[len(initialProblemInput)-1]
+    problemInput = []
+
+    for val in initialproblemInput:
+        problemInput.append(int(val))
+
+    for val1 in problemInput:
+        for val2 in problemInput[problemInput.index(val1)+1:]:
+            if val1+val2 == 2020:
+                return val1*val2
+print(getSol())
